@@ -7,11 +7,12 @@ eol:
 .section .text
 .globl print
 print:
- push %rax
- #mov  $42, %rsi
+ push %rbp
+ mov %rsp, %rbp
  mov $fmt, %rdi
  xor %rax, %rax
+ xor %rdx, %rdx
  call printf
- pop %rax
+ mov %rbp, %rsp
+ pop %rbp
  ret
-
