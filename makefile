@@ -1,6 +1,6 @@
 INP = "input.txt"
 all:
-		javac -Xlint:unchecked ForthCompiler.java
+		javac -Xlint:unchecked ForthCompiler.java #you can comment this line after the first time you do make, so you can test it faster with different inputs
 		java ForthCompiler $(INP)
 		as -g -o main.o main.s
 		as -g -o print.o print.s
